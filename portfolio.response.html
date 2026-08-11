@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portfolio | Leenovation Global Ltd</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  :root {
+    --ink: #101114;
+    --paper: #f4f1ea;
+    --orange: #ff5b2e;
+    --blue: #6c83ff;
+    --lime: #d8ef4f;
+    --cream: #e9ddc5;
+    --muted: #76777a;
+    --white: #fff;
+    --serif: 'Playfair Display', Georgia, serif;
+    --sans: 'DM Sans', Arial, sans-serif;
+  }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+  }
+
+  .portfolio-hero {
+    background: linear-gradient(rgba(28, 29, 32, 0.78), rgba(28, 29, 32, 0.78)), url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&q=80') center/cover;
+    min-height: 540px;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+  }
+
+  .portfolio-hero .wrap {
+    padding-top: 120px;
+  }
+
+  .portfolio-hero h1 {
+    font-family: var(--serif);
+    font-size: clamp(58px, 8.2vw, 110px);
+    line-height: 0.88;
+    letter-spacing: -0.05em;
+    margin: 0 0 25px;
+  }
+
+  .portfolio-hero .lead {
+    max-width: 620px;
+    color: #d9d9d4;
+    font-size: 15px;
+    line-height: 1.9;
+  }
+
+  .portfolio-hero .hero-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+
+  .portfolio-story {
+    padding: 96px 0;
+  }
+
+  .portfolio-story .wrap {
+    width: min(1220px, 91%);
+    margin: auto;
+  }
+
+  .portfolio-story-grid {
+    display: grid;
+    grid-template-columns: 0.92fr 1.08fr;
+    gap: 64px;
+    align-items: center;
+  }
+
+  .portfolio-story img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .portfolio-story h2 {
+    font-family: var(--serif);
+    font-size: clamp(42px, 5.6vw, 68px);
+    line-height: 0.98;
+    letter-spacing: -0.04em;
+    margin: 0 0 24px;
+  }
+
+  .portfolio-story p {
+    color: var(--muted);
+    line-height: 1.85;
+    font-size: 14px;
+  }
+
+  .portfolio-showcase {
+    background: #111;
+    padding: 90px 0;
+    color: var(--white);
+  }
+
+  .portfolio-showcase .wrap {
+    width: min(1220px, 91%);
+    margin: auto;
+  }
+
+  .portfolio-showcase .section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 30px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 34px;
+  }
+
+  .portfolio-showcase .section-head h2 {
+    font-family: var(--serif);
+    font-size: clamp(38px, 5vw, 64px);
+    line-height: 0.95;
+    margin: 0;
+    letter-spacing: -0.04em;
+  }
+
+  .portfolio-showcase .section-head p {
+    max-width: 430px;
+    color: #aaa;
+    line-height: 1.78;
+    font-size: 13px;
+  }
+
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    gap: 24px;
+    margin-top: 34px;
+  }
+
+  .portfolio-card {
+    background: #1e1e21;
+    border: 1px solid #2d2d31;
+    min-height: 420px;
+  }
+
+  .portfolio-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .portfolio-card .portfolio-content {
+    padding: 24px;
+  }
+
+  .portfolio-card .portfolio-content span {
+    display: inline-block;
+    color: var(--orange);
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  .portfolio-card h3 {
+    font-family: var(--serif);
+    font-size: 31px;
+    line-height: 1.04;
+    margin: 14px 0 12px;
+  }
+
+  .portfolio-card p {
+    color: #a2a2a2;
+    font-size: 12px;
+    line-height: 1.92;
+  }
+
+  .portfolio-card .read-more {
+    color: var(--white);
+    font-weight: 800;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-bottom: 1px solid var(--orange);
+    display: inline-block;
+    padding-bottom: 8px;
+    margin-top: 8px;
+  }
+
+  .portfolio-cta-band {
+    background: var(--orange);
+    color: var(--ink);
+    padding: 26px 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    margin-top: 44px;
+  }
+
+  .portfolio-cta-band strong {
+    font-family: var(--serif);
+    font-size: 30px;
+  }
+
+  .portfolio-cta-band span {
+    font-size: 12px;
+    display: block;
+    margin-top: 8px;
+  }
+
+  .portfolio-cta-band .btn {
+    white-space: nowrap;
+  }
+
+  @media (max-width: 900px) {
+    .portfolio-story-grid,
+    .portfolio-grid,
+    .portfolio-showcase .section-head,
+    .portfolio-cta-band {
+      grid-template-columns: 1fr;
+      display: grid;
+    }
+
+    .portfolio-story img {
+      height: 360px;
+    }
+  }
+</style>
+</head>
+<body>
+<header class="site-header" id="header">
+  <div class="wrap nav-wrap">
+    <a class="logo" href="index.html#home" aria-label="Leenovation home"><span class="logo-box">L</span><span><b>LEENOVATION</b><small>GLOBAL LTD</small></span></a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="index.html#home">Home</a><a href="index.html#about">About</a><a href="index.html#services">Services</a><a href="index.html#work">Work</a><a href="portfolio.html" aria-current="page">Portfolio</a><a href="index.html#expertise">Expertise</a><a href="index.html#contact">Contact</a>
+    </nav>
+    <a class="nav-cta" href="index.html#contact">Start a Project <span>↗</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+  </div>
+</header>
+<div class="mobile-nav" id="mobileNav"><a href="index.html#home">Home</a><a href="index.html#about">About</a><a href="index.html#services">Services</a><a href="index.html#work">Work</a><a href="portfolio.html">Portfolio</a><a href="index.html#expertise">Expertise</a><a href="index.html#contact">Contact</a></div>
+
+<main>
+<section class="portfolio-hero">
+  <div class="wrap">
+    <div class="hero-kicker"><i></i> LATEST THINKING</div>
+    <h1>Our Portfolio<br>of Transformations</h1>
+    <p class="lead">From a quiet space that needs clarity to a high-performing interior that inspires the next chapter, Leenovation is built to translate opportunity into better places to live, work, trade and belong.</p>
+    <div class="hero-actions">
+      <a class="btn btn-hot" href="#portfolio-showcase">Explore case studies <b>↘</b></a>
+      <a class="btn btn-ghost" href="index.html#contact">Plan a project <b>↘</b></a>
+    </div>
+  </div>
+</section>
+
+<section class="portfolio-story">
+  <div class="wrap portfolio-story-grid">
+    <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80" alt="Refined renovation interior">
+    <div>
+      <div class="eyebrow">Transformation Portfolio</div>
+      <h2>From potential<br>to performance.</h2>
+      <p>Every project begins with a question: what should this space become for the people who use it today and the future it will shape? Our portfolio message is simple — design the environment, restore confidence, and deliver a better everyday experience.</p>
+      <p>Whether the need is a complete reset, a better customer journey, or a thoughtful interior upgrade, the work must feel considered from the first walk-through to the final handover. That discipline is what gives Leenovation its working rhythm.</p>
+      <a class="text-link" href="index.html#contact">Request a project conversation <span>↗</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="portfolio-showcase" id="portfolio-showcase">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="section-index light">06 <span>/</span> PORTFOLIO</div>
+        <h2>Project direction</h2>
+      </div>
+      <p>Our reference vision is shaped around real categories of transformation: interior clarity, premium finish quality, customer experience and practical delivery.</p>
+    </div>
+
+    <div class="portfolio-grid">
+      <article class="portfolio-card">
+        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&q=80" alt="Modern office interior">
+        <div class="portfolio-content">
+          <span>Commercial fit-out</span>
+          <h3>The Corporate Reset</h3>
+          <p>A rethought workplace built for better flow, stronger visual identity and a team culture that feels ready for growth.</p>
+          <a class="read-more" href="index.html#contact">Plan a similar project ↗</a>
+        </div>
+      </article>
+
+      <article class="portfolio-card">
+        <img src="https://images.unsplash.com/photo-1600566753151-384129cf4e3e?auto=format&fit=crop&q=80" alt="Residential redesign">
+        <div class="portfolio-content">
+          <span>Residential renovation</span>
+          <h3>The Living Upgrade</h3>
+          <p>Better layouts, refined lighting and upgraded materials that bring more warmth, comfort and confidence into the home.</p>
+          <a class="read-more" href="index.html#contact">Plan a similar project ↗</a>
+        </div>
+      </article>
+
+      <article class="portfolio-card">
+        <img src="https://images.unsplash.com/photo-1600566752355-35792b379888?auto=format&fit=crop&q=80" alt="Hospitality lounge space">
+        <div class="portfolio-content">
+          <span>Customer experience</span>
+          <h3>The Hospitality Mood</h3>
+          <p>A warm, welcoming environment shaped for guest flow, brand positioning and a stronger first impression.</p>
+          <a class="read-more" href="index.html#contact">Plan a similar project ↗</a>
+        </div>
+      </article>
+    </div>
+
+    <div class="portfolio-cta-band">
+      <div>
+        <strong>Have a space that deserves a second life?</strong>
+        <span>Let’s shape the next chapter with a clear scope, smarter delivery and a finish people remember.</span>
+      </div>
+      <a class="btn btn-dark" href="index.html#contact">Book a consultation ↗</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+<div class="wrap footer-grid">
+  <div><a class="logo dark-logo" href="index.html#home"><span class="logo-box">L</span><span><b>LEENOVATION</b><small>GLOBAL LTD</small></span></a><p>Transform the space. Elevate the standard.</p></div>
+  <div><h4>Navigate</h4><a href="index.html#about">About</a><a href="index.html#services">Services</a><a href="index.html#work">Work</a><a href="portfolio.html">Portfolio</a><a href="index.html#expertise">Expertise</a></div>
+  <div><h4>Contact</h4><a href="mailto:info@leenovation.com">info@leenovation.com</a><a href="tel:+2348000000000">+234 800 000 0000</a><span>Abuja, Nigeria</span></div>
+  <div><h4>Social</h4><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram ↗</a><a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn ↗</a><a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook ↗</a></div>
+</div>
+<div class="wrap footer-bottom"><span>© 2026 LEENOVATION GLOBAL LTD</span><span>Website concept / verified company facts separated from demo portfolio.</span></div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
