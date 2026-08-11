@@ -228,8 +228,115 @@
       display: grid;
     }
 
+    .portfolio-hero {
+      min-height: auto;
+      padding: 80px 0 40px;
+      background-position: center;
+    }
+
+    .portfolio-hero .wrap {
+      padding-top: 0;
+    }
+
+    .portfolio-hero h1 {
+      font-size: clamp(36px, 8vw, 52px);
+      line-height: 1.05;
+      margin-bottom: 18px;
+    }
+
+    .portfolio-hero .lead {
+      font-size: 14px;
+      max-width: 100%;
+      width: min(100%, 560px);
+    }
+
+    .portfolio-hero .hero-actions {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .portfolio-hero .hero-actions .btn {
+      width: 100%;
+      justify-content: center;
+    }
+
     .portfolio-story img {
-      height: 360px;
+      height: 320px;
+    }
+
+    .portfolio-story h2 {
+      font-size: clamp(28px, 6vw, 40px);
+    }
+
+    .portfolio-story p {
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    .portfolio-showcase .section-head h2 {
+      font-size: clamp(30px, 6vw, 44px);
+    }
+
+    .portfolio-showcase .section-head p {
+      font-size: 13px;
+    }
+
+    .portfolio-card {
+      min-height: auto;
+    }
+
+    .portfolio-card h3 {
+      font-size: 24px;
+    }
+
+    .portfolio-card p {
+      font-size: 13px;
+    }
+
+    .portfolio-cta-band {
+      padding: 24px;
+      gap: 20px;
+      align-items: stretch;
+    }
+
+    .portfolio-cta-band strong {
+      font-size: 24px;
+      line-height: 1.1;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .portfolio-hero {
+      padding: 60px 0 30px;
+    }
+
+    .portfolio-hero h1 {
+      font-size: clamp(30px, 10vw, 42px);
+    }
+
+    .portfolio-hero .lead {
+      font-size: 13px;
+      line-height: 1.75;
+    }
+
+    .portfolio-hero .hero-actions {
+      gap: 12px;
+    }
+
+    .portfolio-story img {
+      height: 260px;
+    }
+
+    .portfolio-cta-band {
+      padding: 20px;
+    }
+
+    .portfolio-cta-band strong {
+      font-size: 20px;
+    }
+
+    .portfolio-cta-band .btn {
+      width: 100%;
     }
   }
 </style>
@@ -277,7 +384,7 @@
   <div class="wrap">
     <div class="section-head">
       <div>
-        <div class="section-index light">06 <span>/</span> PORTFOLIO</div>
+        <div class="section-index light"><span>/</span> PORTFOLIO</div>
         <h2>Project direction</h2>
       </div>
       <p>Our reference vision is shaped around real categories of transformation: interior clarity, premium finish quality, customer experience and practical delivery.</p>
